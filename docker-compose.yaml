@@ -9,10 +9,12 @@ services:
       gradle clean
       &&
       gradle build
-      && 
-      ./gradlew test
       &&
+      gradle wrapper
+      && 
       ./gradlew run
+      &&
+      ./gradlew test
       " 
     environment:
       - ENVIRONMENT=developement
