@@ -8,8 +8,6 @@ services:
     command: sh -c "
       gradle clean
       &&
-      gradle build
-      &&
       gradle wrapper
       && 
       ./gradlew run
