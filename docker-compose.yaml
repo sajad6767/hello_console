@@ -5,5 +5,14 @@ services:
     build: .
     volumes:
       - .:/code
+    command: sh -c "
+      gradle clean
+      &&
+      gradle build
+      && 
+      ./gradlew test
+      &&
+      ./gradlew run
+      " 
     environment:
       - ENVIRONMENT=developement
